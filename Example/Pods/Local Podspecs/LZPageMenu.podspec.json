@@ -1,0 +1,22 @@
+{
+  "name": "LZPageMenu",
+  "version": "0.1.0",
+  "summary": "A short description of LZPageMenu.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Randy1993/LZPageMenu",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Randy1993": "211752656@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Randy1993/LZPageMenu.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LZPageMenu/Classes/**/*"
+}

@@ -7,13 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250914662008ACC9009DD483 /* CustomMenuDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509142F2008ACC9009DD483 /* CustomMenuDelegate.m */; };
+		250914672008ACC9009DD483 /* CustomMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914312008ACC9009DD483 /* CustomMenuItem.m */; };
+		250914682008ACC9009DD483 /* CustomMenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250914322008ACC9009DD483 /* CustomMenuItem.xib */; };
+		250914692008ACC9009DD483 /* HeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914352008ACC9009DD483 /* HeaderViewController.m */; };
+		2509146A2008ACC9009DD483 /* LZHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914372008ACC9009DD483 /* LZHeaderView.m */; };
+		2509146B2008ACC9009DD483 /* LZHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250914382008ACC9009DD483 /* LZHeaderView.xib */; };
+		2509146C2008ACC9009DD483 /* OffsetHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509143A2008ACC9009DD483 /* OffsetHeaderViewController.m */; };
+		2509146D2008ACC9009DD483 /* SubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509143C2008ACC9009DD483 /* SubTableViewController.m */; };
+		2509146E2008ACC9009DD483 /* SubTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2509143D2008ACC9009DD483 /* SubTableViewController.xib */; };
+		2509146F2008ACC9009DD483 /* SubTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509143F2008ACC9009DD483 /* SubTableViewController1.m */; };
+		250914702008ACC9009DD483 /* TwoTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914412008ACC9009DD483 /* TwoTablesViewController.m */; };
+		250914712008ACC9009DD483 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914442008ACC9009DD483 /* BasicViewController.m */; };
+		250914722008ACC9009DD483 /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914462008ACC9009DD483 /* BlockViewController.m */; };
+		250914732008ACC9009DD483 /* DotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914482008ACC9009DD483 /* DotViewController.m */; };
+		250914742008ACC9009DD483 /* HollowOvalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509144A2008ACC9009DD483 /* HollowOvalViewController.m */; };
+		250914752008ACC9009DD483 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509144C2008ACC9009DD483 /* ImageViewController.m */; };
+		250914762008ACC9009DD483 /* SolidOvalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509144E2008ACC9009DD483 /* SolidOvalViewController.m */; };
+		250914772008ACC9009DD483 /* SpecialBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914502008ACC9009DD483 /* SpecialBlockViewController.m */; };
+		250914782008ACC9009DD483 /* AttributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914532008ACC9009DD483 /* AttributeViewController.m */; };
+		250914792008ACC9009DD483 /* AverageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914552008ACC9009DD483 /* AverageViewController.m */; };
+		2509147A2008ACC9009DD483 /* CustomItemWidthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914572008ACC9009DD483 /* CustomItemWidthViewController.m */; };
+		2509147B2008ACC9009DD483 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914592008ACC9009DD483 /* CustomViewController.m */; };
+		2509147C2008ACC9009DD483 /* NaviMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509145B2008ACC9009DD483 /* NaviMenuViewController.m */; };
+		2509147D2008ACC9009DD483 /* UpdateTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509145D2008ACC9009DD483 /* UpdateTitleViewController.m */; };
+		2509147E2008ACC9009DD483 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2509145F2008ACC9009DD483 /* ShowViewController.m */; };
+		2509147F2008ACC9009DD483 /* ShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250914602008ACC9009DD483 /* ShowViewController.xib */; };
+		250914802008ACC9009DD483 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 250914622008ACC9009DD483 /* Back.png */; };
+		250914812008ACC9009DD483 /* Flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 250914632008ACC9009DD483 /* Flower.png */; };
+		250914822008ACC9009DD483 /* HeaderImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 250914642008ACC9009DD483 /* HeaderImage.jpeg */; };
+		250914832008ACC9009DD483 /* ImageArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 250914652008ACC9009DD483 /* ImageArrow.png */; };
+		250914872008ACE4009DD483 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914842008ACE4009DD483 /* TableViewController.m */; };
+		250914882008ACE4009DD483 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914842008ACE4009DD483 /* TableViewController.m */; };
+		250914892008ACE4009DD483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250914862008ACE4009DD483 /* Main.storyboard */; };
+		2509148A2008ACE4009DD483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250914862008ACE4009DD483 /* Main.storyboard */; };
+		2509148B2008ADAF009DD483 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914442008ACC9009DD483 /* BasicViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* LZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* LZAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* LZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* LZViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,7 +56,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		816418305819B58C30E43B50 /* Pods_LZPageMenu_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B66E5F90EAAD8AFC6D2706A /* Pods_LZPageMenu_Tests.framework */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		BE40E8C8254AF30E91146CDA /* Pods_LZPageMenu_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B040C41C84EDF91D3C8F3 /* Pods_LZPageMenu_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +72,64 @@
 /* Begin PBXFileReference section */
 		030B82B60C70ABD7CC0B66BC /* Pods-LZPageMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZPageMenu_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZPageMenu_Example/Pods-LZPageMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
 		07C680FA0B46A777251F5CAA /* Pods-LZPageMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZPageMenu_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZPageMenu_Example/Pods-LZPageMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		24714A24D08F1F6EB0E7E1D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		24E32B56CF72257A6993AE90 /* LZPageMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LZPageMenu.podspec; path = ../LZPageMenu.podspec; sourceTree = "<group>"; };
-		3C8F4EB9A3DD711CA3E22389 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		24714A24D08F1F6EB0E7E1D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		24E32B56CF72257A6993AE90 /* LZPageMenu.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LZPageMenu.podspec; path = ../LZPageMenu.podspec; sourceTree = "<group>"; };
+		2509142E2008ACC9009DD483 /* CustomMenuDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMenuDelegate.h; sourceTree = "<group>"; };
+		2509142F2008ACC9009DD483 /* CustomMenuDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMenuDelegate.m; sourceTree = "<group>"; };
+		250914302008ACC9009DD483 /* CustomMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMenuItem.h; sourceTree = "<group>"; };
+		250914312008ACC9009DD483 /* CustomMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMenuItem.m; sourceTree = "<group>"; };
+		250914322008ACC9009DD483 /* CustomMenuItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMenuItem.xib; sourceTree = "<group>"; };
+		250914342008ACC9009DD483 /* HeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewController.h; sourceTree = "<group>"; };
+		250914352008ACC9009DD483 /* HeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewController.m; sourceTree = "<group>"; };
+		250914362008ACC9009DD483 /* LZHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHeaderView.h; sourceTree = "<group>"; };
+		250914372008ACC9009DD483 /* LZHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHeaderView.m; sourceTree = "<group>"; };
+		250914382008ACC9009DD483 /* LZHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZHeaderView.xib; sourceTree = "<group>"; };
+		250914392008ACC9009DD483 /* OffsetHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffsetHeaderViewController.h; sourceTree = "<group>"; };
+		2509143A2008ACC9009DD483 /* OffsetHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffsetHeaderViewController.m; sourceTree = "<group>"; };
+		2509143B2008ACC9009DD483 /* SubTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubTableViewController.h; sourceTree = "<group>"; };
+		2509143C2008ACC9009DD483 /* SubTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubTableViewController.m; sourceTree = "<group>"; };
+		2509143D2008ACC9009DD483 /* SubTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubTableViewController.xib; sourceTree = "<group>"; };
+		2509143E2008ACC9009DD483 /* SubTableViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubTableViewController1.h; sourceTree = "<group>"; };
+		2509143F2008ACC9009DD483 /* SubTableViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubTableViewController1.m; sourceTree = "<group>"; };
+		250914402008ACC9009DD483 /* TwoTablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTablesViewController.h; sourceTree = "<group>"; };
+		250914412008ACC9009DD483 /* TwoTablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTablesViewController.m; sourceTree = "<group>"; };
+		250914432008ACC9009DD483 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		250914442008ACC9009DD483 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		250914452008ACC9009DD483 /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
+		250914462008ACC9009DD483 /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
+		250914472008ACC9009DD483 /* DotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotViewController.h; sourceTree = "<group>"; };
+		250914482008ACC9009DD483 /* DotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotViewController.m; sourceTree = "<group>"; };
+		250914492008ACC9009DD483 /* HollowOvalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HollowOvalViewController.h; sourceTree = "<group>"; };
+		2509144A2008ACC9009DD483 /* HollowOvalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HollowOvalViewController.m; sourceTree = "<group>"; };
+		2509144B2008ACC9009DD483 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		2509144C2008ACC9009DD483 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		2509144D2008ACC9009DD483 /* SolidOvalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolidOvalViewController.h; sourceTree = "<group>"; };
+		2509144E2008ACC9009DD483 /* SolidOvalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolidOvalViewController.m; sourceTree = "<group>"; };
+		2509144F2008ACC9009DD483 /* SpecialBlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialBlockViewController.h; sourceTree = "<group>"; };
+		250914502008ACC9009DD483 /* SpecialBlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialBlockViewController.m; sourceTree = "<group>"; };
+		250914522008ACC9009DD483 /* AttributeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeViewController.h; sourceTree = "<group>"; };
+		250914532008ACC9009DD483 /* AttributeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeViewController.m; sourceTree = "<group>"; };
+		250914542008ACC9009DD483 /* AverageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AverageViewController.h; sourceTree = "<group>"; };
+		250914552008ACC9009DD483 /* AverageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AverageViewController.m; sourceTree = "<group>"; };
+		250914562008ACC9009DD483 /* CustomItemWidthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItemWidthViewController.h; sourceTree = "<group>"; };
+		250914572008ACC9009DD483 /* CustomItemWidthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItemWidthViewController.m; sourceTree = "<group>"; };
+		250914582008ACC9009DD483 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		250914592008ACC9009DD483 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		2509145A2008ACC9009DD483 /* NaviMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviMenuViewController.h; sourceTree = "<group>"; };
+		2509145B2008ACC9009DD483 /* NaviMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviMenuViewController.m; sourceTree = "<group>"; };
+		2509145C2008ACC9009DD483 /* UpdateTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateTitleViewController.h; sourceTree = "<group>"; };
+		2509145D2008ACC9009DD483 /* UpdateTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTitleViewController.m; sourceTree = "<group>"; };
+		2509145E2008ACC9009DD483 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		2509145F2008ACC9009DD483 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		250914602008ACC9009DD483 /* ShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowViewController.xib; sourceTree = "<group>"; };
+		250914622008ACC9009DD483 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		250914632008ACC9009DD483 /* Flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flower.png; sourceTree = "<group>"; };
+		250914642008ACC9009DD483 /* HeaderImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HeaderImage.jpeg; sourceTree = "<group>"; };
+		250914652008ACC9009DD483 /* ImageArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageArrow.png; sourceTree = "<group>"; };
+		250914842008ACE4009DD483 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		250914852008ACE4009DD483 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		250914862008ACE4009DD483 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3C8F4EB9A3DD711CA3E22389 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LZPageMenu_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZPageMenu_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,8 +140,6 @@
 		6003F59B195388D20070C39A /* LZPageMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LZPageMenu-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* LZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* LZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* LZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* LZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* LZPageMenu_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZPageMenu_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,7 +150,6 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8F14767F4A3D157548F4EE /* Pods-LZPageMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZPageMenu_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZPageMenu_Tests/Pods-LZPageMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D7F1287204A9E5C8E342308 /* Pods-LZPageMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZPageMenu_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZPageMenu_Tests/Pods-LZPageMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B66E5F90EAAD8AFC6D2706A /* Pods_LZPageMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZPageMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79B040C41C84EDF91D3C8F3 /* Pods_LZPageMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZPageMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +180,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2509142C2008ACC9009DD483 /* TestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2509142D2008ACC9009DD483 /* Custom */,
+				250914332008ACC9009DD483 /* HeaderView */,
+				250914422008ACC9009DD483 /* Indicator */,
+				250914512008ACC9009DD483 /* Menu */,
+				2509145E2008ACC9009DD483 /* ShowViewController.h */,
+				2509145F2008ACC9009DD483 /* ShowViewController.m */,
+				250914602008ACC9009DD483 /* ShowViewController.xib */,
+			);
+			path = TestViewController;
+			sourceTree = "<group>";
+		};
+		2509142D2008ACC9009DD483 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				2509142E2008ACC9009DD483 /* CustomMenuDelegate.h */,
+				2509142F2008ACC9009DD483 /* CustomMenuDelegate.m */,
+				250914302008ACC9009DD483 /* CustomMenuItem.h */,
+				250914312008ACC9009DD483 /* CustomMenuItem.m */,
+				250914322008ACC9009DD483 /* CustomMenuItem.xib */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		250914332008ACC9009DD483 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				250914342008ACC9009DD483 /* HeaderViewController.h */,
+				250914352008ACC9009DD483 /* HeaderViewController.m */,
+				250914362008ACC9009DD483 /* LZHeaderView.h */,
+				250914372008ACC9009DD483 /* LZHeaderView.m */,
+				250914382008ACC9009DD483 /* LZHeaderView.xib */,
+				250914392008ACC9009DD483 /* OffsetHeaderViewController.h */,
+				2509143A2008ACC9009DD483 /* OffsetHeaderViewController.m */,
+				2509143B2008ACC9009DD483 /* SubTableViewController.h */,
+				2509143C2008ACC9009DD483 /* SubTableViewController.m */,
+				2509143D2008ACC9009DD483 /* SubTableViewController.xib */,
+				2509143E2008ACC9009DD483 /* SubTableViewController1.h */,
+				2509143F2008ACC9009DD483 /* SubTableViewController1.m */,
+				250914402008ACC9009DD483 /* TwoTablesViewController.h */,
+				250914412008ACC9009DD483 /* TwoTablesViewController.m */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		250914422008ACC9009DD483 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				250914432008ACC9009DD483 /* BasicViewController.h */,
+				250914442008ACC9009DD483 /* BasicViewController.m */,
+				250914452008ACC9009DD483 /* BlockViewController.h */,
+				250914462008ACC9009DD483 /* BlockViewController.m */,
+				250914472008ACC9009DD483 /* DotViewController.h */,
+				250914482008ACC9009DD483 /* DotViewController.m */,
+				250914492008ACC9009DD483 /* HollowOvalViewController.h */,
+				2509144A2008ACC9009DD483 /* HollowOvalViewController.m */,
+				2509144B2008ACC9009DD483 /* ImageViewController.h */,
+				2509144C2008ACC9009DD483 /* ImageViewController.m */,
+				2509144D2008ACC9009DD483 /* SolidOvalViewController.h */,
+				2509144E2008ACC9009DD483 /* SolidOvalViewController.m */,
+				2509144F2008ACC9009DD483 /* SpecialBlockViewController.h */,
+				250914502008ACC9009DD483 /* SpecialBlockViewController.m */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
+		250914512008ACC9009DD483 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				250914522008ACC9009DD483 /* AttributeViewController.h */,
+				250914532008ACC9009DD483 /* AttributeViewController.m */,
+				250914542008ACC9009DD483 /* AverageViewController.h */,
+				250914552008ACC9009DD483 /* AverageViewController.m */,
+				250914562008ACC9009DD483 /* CustomItemWidthViewController.h */,
+				250914572008ACC9009DD483 /* CustomItemWidthViewController.m */,
+				250914582008ACC9009DD483 /* CustomViewController.h */,
+				250914592008ACC9009DD483 /* CustomViewController.m */,
+				2509145A2008ACC9009DD483 /* NaviMenuViewController.h */,
+				2509145B2008ACC9009DD483 /* NaviMenuViewController.m */,
+				2509145C2008ACC9009DD483 /* UpdateTitleViewController.h */,
+				2509145D2008ACC9009DD483 /* UpdateTitleViewController.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		250914612008ACC9009DD483 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				250914622008ACC9009DD483 /* Back.png */,
+				250914632008ACC9009DD483 /* Flower.png */,
+				250914642008ACC9009DD483 /* HeaderImage.jpeg */,
+				250914652008ACC9009DD483 /* ImageArrow.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,11 +315,13 @@
 		6003F593195388D20070C39A /* Example for LZPageMenu */ = {
 			isa = PBXGroup;
 			children = (
+				250914612008ACC9009DD483 /* Images */,
+				2509142C2008ACC9009DD483 /* TestViewController */,
 				6003F59C195388D20070C39A /* LZAppDelegate.h */,
 				6003F59D195388D20070C39A /* LZAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* LZViewController.h */,
-				6003F5A6195388D20070C39A /* LZViewController.m */,
+				250914862008ACE4009DD483 /* Main.storyboard */,
+				250914852008ACE4009DD483 /* TableViewController.h */,
+				250914842008ACE4009DD483 /* TableViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -250,6 +435,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Randy1993;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 6HR29LK8XH;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -279,10 +467,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				250914802008ACC9009DD483 /* Back.png in Resources */,
+				250914682008ACC9009DD483 /* CustomMenuItem.xib in Resources */,
+				2509146B2008ACC9009DD483 /* LZHeaderView.xib in Resources */,
+				2509146E2008ACC9009DD483 /* SubTableViewController.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				250914812008ACC9009DD483 /* Flower.png in Resources */,
+				250914892008ACE4009DD483 /* Main.storyboard in Resources */,
+				250914832008ACC9009DD483 /* ImageArrow.png in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				2509147F2008ACC9009DD483 /* ShowViewController.xib in Resources */,
+				250914822008ACC9009DD483 /* HeaderImage.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				2509148A2008ACE4009DD483 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,9 +600,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250914732008ACC9009DD483 /* DotViewController.m in Sources */,
 				6003F59E195388D20070C39A /* LZAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* LZViewController.m in Sources */,
+				2509147A2008ACC9009DD483 /* CustomItemWidthViewController.m in Sources */,
+				2509147B2008ACC9009DD483 /* CustomViewController.m in Sources */,
+				250914752008ACC9009DD483 /* ImageViewController.m in Sources */,
+				250914692008ACC9009DD483 /* HeaderViewController.m in Sources */,
+				250914872008ACE4009DD483 /* TableViewController.m in Sources */,
+				250914782008ACC9009DD483 /* AttributeViewController.m in Sources */,
+				250914702008ACC9009DD483 /* TwoTablesViewController.m in Sources */,
+				250914722008ACC9009DD483 /* BlockViewController.m in Sources */,
+				250914792008ACC9009DD483 /* AverageViewController.m in Sources */,
+				250914742008ACC9009DD483 /* HollowOvalViewController.m in Sources */,
+				2509146D2008ACC9009DD483 /* SubTableViewController.m in Sources */,
+				250914712008ACC9009DD483 /* BasicViewController.m in Sources */,
+				250914662008ACC9009DD483 /* CustomMenuDelegate.m in Sources */,
+				2509146A2008ACC9009DD483 /* LZHeaderView.m in Sources */,
+				2509147E2008ACC9009DD483 /* ShowViewController.m in Sources */,
+				2509146F2008ACC9009DD483 /* SubTableViewController1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2509147D2008ACC9009DD483 /* UpdateTitleViewController.m in Sources */,
+				2509146C2008ACC9009DD483 /* OffsetHeaderViewController.m in Sources */,
+				250914762008ACC9009DD483 /* SolidOvalViewController.m in Sources */,
+				250914772008ACC9009DD483 /* SpecialBlockViewController.m in Sources */,
+				2509147C2008ACC9009DD483 /* NaviMenuViewController.m in Sources */,
+				250914672008ACC9009DD483 /* CustomMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +633,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				250914882008ACE4009DD483 /* TableViewController.m in Sources */,
+				2509148B2008ADAF009DD483 /* BasicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,9 +754,11 @@
 			baseConfigurationReference = 07C680FA0B46A777251F5CAA /* Pods-LZPageMenu_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HR29LK8XH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZPageMenu/LZPageMenu-Prefix.pch";
 				INFOPLIST_FILE = "LZPageMenu/LZPageMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,9 +771,11 @@
 			baseConfigurationReference = 030B82B60C70ABD7CC0B66BC /* Pods-LZPageMenu_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6HR29LK8XH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LZPageMenu/LZPageMenu-Prefix.pch";
 				INFOPLIST_FILE = "LZPageMenu/LZPageMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

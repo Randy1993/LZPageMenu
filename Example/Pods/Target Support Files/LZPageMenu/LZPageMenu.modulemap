@@ -1,0 +1,6 @@
+framework module LZPageMenu {
+  umbrella header "LZPageMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

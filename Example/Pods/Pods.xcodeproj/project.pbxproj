@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0239AB8F27E243B2D1CF0E71E9D77C15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		250914042008AC29009DD483 /* LZPageMenuMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F72008AC29009DD483 /* LZPageMenuMenuView.m */; };
+		250914052008AC29009DD483 /* LZPageMenuMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F72008AC29009DD483 /* LZPageMenuMenuView.m */; };
+		250914062008AC29009DD483 /* LZPageMenuMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F72008AC29009DD483 /* LZPageMenuMenuView.m */; };
+		250914072008AC29009DD483 /* LZPageMenuHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913F82008AC29009DD483 /* LZPageMenuHeader.h */; };
+		250914082008AC29009DD483 /* LZPageMenuHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913F82008AC29009DD483 /* LZPageMenuHeader.h */; };
+		250914092008AC29009DD483 /* LZPageMenuHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913F82008AC29009DD483 /* LZPageMenuHeader.h */; };
+		2509140A2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F92008AC29009DD483 /* LZPageMenuPropertyManager.m */; };
+		2509140B2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F92008AC29009DD483 /* LZPageMenuPropertyManager.m */; };
+		2509140C2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913F92008AC29009DD483 /* LZPageMenuPropertyManager.m */; };
+		2509140D2008AC29009DD483 /* LZPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FA2008AC29009DD483 /* LZPageMenu.h */; };
+		2509140E2008AC29009DD483 /* LZPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FA2008AC29009DD483 /* LZPageMenu.h */; };
+		2509140F2008AC29009DD483 /* LZPageMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FA2008AC29009DD483 /* LZPageMenu.h */; };
+		250914102008AC29009DD483 /* LZPageMenuMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FB2008AC29009DD483 /* LZPageMenuMenuView.h */; };
+		250914112008AC29009DD483 /* LZPageMenuMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FB2008AC29009DD483 /* LZPageMenuMenuView.h */; };
+		250914122008AC29009DD483 /* LZPageMenuMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FB2008AC29009DD483 /* LZPageMenuMenuView.h */; };
+		250914132008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FC2008AC29009DD483 /* LZPageMenuDynamicItem.m */; };
+		250914142008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FC2008AC29009DD483 /* LZPageMenuDynamicItem.m */; };
+		250914152008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FC2008AC29009DD483 /* LZPageMenuDynamicItem.m */; };
+		250914162008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FD2008AC29009DD483 /* LZPageMenuPropertyManager.h */; };
+		250914172008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FD2008AC29009DD483 /* LZPageMenuPropertyManager.h */; };
+		250914182008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FD2008AC29009DD483 /* LZPageMenuPropertyManager.h */; };
+		250914192008AC29009DD483 /* UIView+LZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FE2008AC29009DD483 /* UIView+LZFrame.m */; };
+		2509141A2008AC29009DD483 /* UIView+LZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FE2008AC29009DD483 /* UIView+LZFrame.m */; };
+		2509141B2008AC29009DD483 /* UIView+LZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 250913FE2008AC29009DD483 /* UIView+LZFrame.m */; };
+		2509141C2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FF2008AC29009DD483 /* LZPageMenuCustomProtocol.h */; };
+		2509141D2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FF2008AC29009DD483 /* LZPageMenuCustomProtocol.h */; };
+		2509141E2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250913FF2008AC29009DD483 /* LZPageMenuCustomProtocol.h */; };
+		2509141F2008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914002008AC29009DD483 /* LZPageMenuDynamicItem.h */; };
+		250914202008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914002008AC29009DD483 /* LZPageMenuDynamicItem.h */; };
+		250914212008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914002008AC29009DD483 /* LZPageMenuDynamicItem.h */; };
+		250914222008AC29009DD483 /* UIView+LZFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914012008AC29009DD483 /* UIView+LZFrame.h */; };
+		250914232008AC29009DD483 /* UIView+LZFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914012008AC29009DD483 /* UIView+LZFrame.h */; };
+		250914242008AC29009DD483 /* UIView+LZFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914012008AC29009DD483 /* UIView+LZFrame.h */; };
+		250914252008AC29009DD483 /* LZPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914022008AC29009DD483 /* LZPageMenu.m */; };
+		250914262008AC29009DD483 /* LZPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914022008AC29009DD483 /* LZPageMenu.m */; };
+		250914272008AC29009DD483 /* LZPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 250914022008AC29009DD483 /* LZPageMenu.m */; };
+		250914282008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914032008AC29009DD483 /* LZPageMenuPropertyProtocol.h */; };
+		250914292008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914032008AC29009DD483 /* LZPageMenuPropertyProtocol.h */; };
+		2509142A2008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 250914032008AC29009DD483 /* LZPageMenuPropertyProtocol.h */; };
+		31DE7304928ED1C7420B92533724B401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		41438610197C5D2602B380AA0050A8E6 /* Pods-LZPageMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954CDAFE55724DFC82A2EACDA896343 /* Pods-LZPageMenu_Tests-dummy.m */; };
+		4C4611013998E2B50804C79B435E707D /* LZPageMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E5DFD478A60EB1EAE53E1310EC57E6 /* LZPageMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D848A85D769D72490EBDD46641A7451 /* LZPageMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9CAFF7A8B8D1AE2D34412AA23A3C16 /* LZPageMenu-dummy.m */; };
+		4E535610FB4982CBFA2EBEE4EE91E0D7 /* Pods-LZPageMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 889531FF84B7D1251A0D0D4612D59464 /* Pods-LZPageMenu_Example-dummy.m */; };
+		5C65D6B9BDA4A81769D10DE0F1076536 /* Pods-LZPageMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FA56BB238AFD829115ACF0837721E23 /* Pods-LZPageMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD6C8DC57E0E8B2E597E1284975D3CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		B29B2956C26B4C8809A20BAB1E8888A4 /* Pods-LZPageMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B13B9A60BC5134982F1B7F2053086D5 /* Pods-LZPageMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DE8C8203BA9FFAB2CACC52745D9C7E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 831F94CDF2203C23E456700911A599FA;
+			remoteInfo = LZPageMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0954CDAFE55724DFC82A2EACDA896343 /* Pods-LZPageMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LZPageMenu_Tests-dummy.m"; sourceTree = "<group>"; };
+		0C78F63E7074ACDF7CF2D350FF5AD9CA /* Pods-LZPageMenu_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LZPageMenu_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0D33CD4C951FF1627C8A29930092628B /* Pods_LZPageMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZPageMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1821EA025F4D78744A735F85E73CA901 /* Pods-LZPageMenu_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LZPageMenu_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D9CAFF7A8B8D1AE2D34412AA23A3C16 /* LZPageMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LZPageMenu-dummy.m"; sourceTree = "<group>"; };
+		20FF8EC02764BE4C5E87909B9038482B /* LZPageMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LZPageMenu-prefix.pch"; sourceTree = "<group>"; };
+		250913F72008AC29009DD483 /* LZPageMenuMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuMenuView.m; sourceTree = "<group>"; };
+		250913F82008AC29009DD483 /* LZPageMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuHeader.h; sourceTree = "<group>"; };
+		250913F92008AC29009DD483 /* LZPageMenuPropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuPropertyManager.m; sourceTree = "<group>"; };
+		250913FA2008AC29009DD483 /* LZPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenu.h; sourceTree = "<group>"; };
+		250913FB2008AC29009DD483 /* LZPageMenuMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuMenuView.h; sourceTree = "<group>"; };
+		250913FC2008AC29009DD483 /* LZPageMenuDynamicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuDynamicItem.m; sourceTree = "<group>"; };
+		250913FD2008AC29009DD483 /* LZPageMenuPropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuPropertyManager.h; sourceTree = "<group>"; };
+		250913FE2008AC29009DD483 /* UIView+LZFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LZFrame.m"; sourceTree = "<group>"; };
+		250913FF2008AC29009DD483 /* LZPageMenuCustomProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuCustomProtocol.h; sourceTree = "<group>"; };
+		250914002008AC29009DD483 /* LZPageMenuDynamicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuDynamicItem.h; sourceTree = "<group>"; };
+		250914012008AC29009DD483 /* UIView+LZFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LZFrame.h"; sourceTree = "<group>"; };
+		250914022008AC29009DD483 /* LZPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenu.m; sourceTree = "<group>"; };
+		250914032008AC29009DD483 /* LZPageMenuPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuPropertyProtocol.h; sourceTree = "<group>"; };
+		3D4EF3C50A92D9A73D55FB5D0146A38C /* Pods-LZPageMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LZPageMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		42C6F259019B80153F0BE3CC83FBCD8D /* Pods-LZPageMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LZPageMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50A0F3DB2074236AE4983638D315DA1B /* Pods-LZPageMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LZPageMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		51E5DFD478A60EB1EAE53E1310EC57E6 /* LZPageMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LZPageMenu-umbrella.h"; sourceTree = "<group>"; };
+		5776E1E74B62C4E2CE47C91E15561A9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F68F7C252330153F8C9F3839194C609 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA56BB238AFD829115ACF0837721E23 /* Pods-LZPageMenu_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LZPageMenu_Example-umbrella.h"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69E48E409D93EBAE924B6FA44B4AC6AD /* Pods-LZPageMenu_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LZPageMenu_Example-resources.sh"; sourceTree = "<group>"; };
+		6B13B9A60BC5134982F1B7F2053086D5 /* Pods-LZPageMenu_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LZPageMenu_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7C3D966122B311DAEC2690A24F259A51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80CFFA5645FF62E68C055CA669FCD157 /* Pods_LZPageMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZPageMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8108D13C7C66FED949A38DBA9F418674 /* Pods-LZPageMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LZPageMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
+		889531FF84B7D1251A0D0D4612D59464 /* Pods-LZPageMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LZPageMenu_Example-dummy.m"; sourceTree = "<group>"; };
+		8ABE87830475A5172DBD5938A14132DE /* Pods-LZPageMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LZPageMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		90EFD69408F97AD56D26045B91A22E64 /* Pods-LZPageMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LZPageMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6A9DE85A6BB0F1B6E15A26A71A79A98 /* Pods-LZPageMenu_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LZPageMenu_Tests.modulemap"; sourceTree = "<group>"; };
+		BE90F7B066C01B7A6B32934E60AE3ABE /* Pods-LZPageMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LZPageMenu_Example.modulemap"; sourceTree = "<group>"; };
+		BF1B2BC7222C93DECDA9266E899DEB5B /* Pods-LZPageMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LZPageMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D3E9AAC8344E53DD812169A1DF8F59CD /* LZPageMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LZPageMenu.xcconfig; sourceTree = "<group>"; };
+		D5AA2154087DD4F2799DC62794C2021C /* LZPageMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LZPageMenu.modulemap; sourceTree = "<group>"; };
+		DB58E0379C616641C22FCB92C2454C78 /* Pods-LZPageMenu_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LZPageMenu_Tests-resources.sh"; sourceTree = "<group>"; };
+		E7EA39746EFDCE75113250A613DF989E /* LZPageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LZPageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2EB330F78F3B32DC83CCFEAA1470EB5 /* Pods-LZPageMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LZPageMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD78A57AD045A86D5C1C8A1CD8ABCC8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31DE7304928ED1C7420B92533724B401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68ACECB1CD5133B9FB2AEB4C4A9D80C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD6C8DC57E0E8B2E597E1284975D3CA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCA285EFE1FFFA788DEEAF0ABDE592E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0239AB8F27E243B2D1CF0E71E9D77C15 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23D4C36BC8232A288C550D59A8592518 /* LZPageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				250913FA2008AC29009DD483 /* LZPageMenu.h */,
+				250914022008AC29009DD483 /* LZPageMenu.m */,
+				250913FF2008AC29009DD483 /* LZPageMenuCustomProtocol.h */,
+				250914002008AC29009DD483 /* LZPageMenuDynamicItem.h */,
+				250913FC2008AC29009DD483 /* LZPageMenuDynamicItem.m */,
+				250913F82008AC29009DD483 /* LZPageMenuHeader.h */,
+				250913FB2008AC29009DD483 /* LZPageMenuMenuView.h */,
+				250913F72008AC29009DD483 /* LZPageMenuMenuView.m */,
+				250913FD2008AC29009DD483 /* LZPageMenuPropertyManager.h */,
+				250913F92008AC29009DD483 /* LZPageMenuPropertyManager.m */,
+				250914032008AC29009DD483 /* LZPageMenuPropertyProtocol.h */,
+				250914012008AC29009DD483 /* UIView+LZFrame.h */,
+				250913FE2008AC29009DD483 /* UIView+LZFrame.m */,
+				572ED16F3CE24F4289B1B07627EA6723 /* Support Files */,
+			);
+			name = LZPageMenu;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4876F0DC0AD88E7F196EBECDF9ECF9A4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C32487F8CABB6DBBD0A69C8DFDE4D1B3 /* Pods-LZPageMenu_Example */,
+				CD625E007A897505B3641FFF5C73BA29 /* Pods-LZPageMenu_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4C53B70511AC24AAA0577966DAB15AC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7EA39746EFDCE75113250A613DF989E /* LZPageMenu.framework */,
+				0D33CD4C951FF1627C8A29930092628B /* Pods_LZPageMenu_Example.framework */,
+				80CFFA5645FF62E68C055CA669FCD157 /* Pods_LZPageMenu_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		572ED16F3CE24F4289B1B07627EA6723 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5776E1E74B62C4E2CE47C91E15561A9E /* Info.plist */,
+				D5AA2154087DD4F2799DC62794C2021C /* LZPageMenu.modulemap */,
+				D3E9AAC8344E53DD812169A1DF8F59CD /* LZPageMenu.xcconfig */,
+				1D9CAFF7A8B8D1AE2D34412AA23A3C16 /* LZPageMenu-dummy.m */,
+				20FF8EC02764BE4C5E87909B9038482B /* LZPageMenu-prefix.pch */,
+				51E5DFD478A60EB1EAE53E1310EC57E6 /* LZPageMenu-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LZPageMenu";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E144068C07FB70C428FB0C4F9A6FA715 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4C53B70511AC24AAA0577966DAB15AC5 /* Products */,
+				4876F0DC0AD88E7F196EBECDF9ECF9A4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C32487F8CABB6DBBD0A69C8DFDE4D1B3 /* Pods-LZPageMenu_Example */ = {
+			isa = PBXGroup;
+			children = (
+				7C3D966122B311DAEC2690A24F259A51 /* Info.plist */,
+				BE90F7B066C01B7A6B32934E60AE3ABE /* Pods-LZPageMenu_Example.modulemap */,
+				42C6F259019B80153F0BE3CC83FBCD8D /* Pods-LZPageMenu_Example-acknowledgements.markdown */,
+				BF1B2BC7222C93DECDA9266E899DEB5B /* Pods-LZPageMenu_Example-acknowledgements.plist */,
+				889531FF84B7D1251A0D0D4612D59464 /* Pods-LZPageMenu_Example-dummy.m */,
+				90EFD69408F97AD56D26045B91A22E64 /* Pods-LZPageMenu_Example-frameworks.sh */,
+				69E48E409D93EBAE924B6FA44B4AC6AD /* Pods-LZPageMenu_Example-resources.sh */,
+				5FA56BB238AFD829115ACF0837721E23 /* Pods-LZPageMenu_Example-umbrella.h */,
+				8ABE87830475A5172DBD5938A14132DE /* Pods-LZPageMenu_Example.debug.xcconfig */,
+				8108D13C7C66FED949A38DBA9F418674 /* Pods-LZPageMenu_Example.release.xcconfig */,
+			);
+			name = "Pods-LZPageMenu_Example";
+			path = "Target Support Files/Pods-LZPageMenu_Example";
+			sourceTree = "<group>";
+		};
+		CD625E007A897505B3641FFF5C73BA29 /* Pods-LZPageMenu_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5F68F7C252330153F8C9F3839194C609 /* Info.plist */,
+				A6A9DE85A6BB0F1B6E15A26A71A79A98 /* Pods-LZPageMenu_Tests.modulemap */,
+				1821EA025F4D78744A735F85E73CA901 /* Pods-LZPageMenu_Tests-acknowledgements.markdown */,
+				3D4EF3C50A92D9A73D55FB5D0146A38C /* Pods-LZPageMenu_Tests-acknowledgements.plist */,
+				0954CDAFE55724DFC82A2EACDA896343 /* Pods-LZPageMenu_Tests-dummy.m */,
+				0C78F63E7074ACDF7CF2D350FF5AD9CA /* Pods-LZPageMenu_Tests-frameworks.sh */,
+				DB58E0379C616641C22FCB92C2454C78 /* Pods-LZPageMenu_Tests-resources.sh */,
+				6B13B9A60BC5134982F1B7F2053086D5 /* Pods-LZPageMenu_Tests-umbrella.h */,
+				F2EB330F78F3B32DC83CCFEAA1470EB5 /* Pods-LZPageMenu_Tests.debug.xcconfig */,
+				50A0F3DB2074236AE4983638D315DA1B /* Pods-LZPageMenu_Tests.release.xcconfig */,
+			);
+			name = "Pods-LZPageMenu_Tests";
+			path = "Target Support Files/Pods-LZPageMenu_Tests";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E144068C07FB70C428FB0C4F9A6FA715 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23D4C36BC8232A288C550D59A8592518 /* LZPageMenu */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		145E6331B9DCC8B901CAD1DC2A04C85E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2509141F2008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */,
+				2509140D2008AC29009DD483 /* LZPageMenu.h in Headers */,
+				2509141C2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */,
+				250914222008AC29009DD483 /* UIView+LZFrame.h in Headers */,
+				4C4611013998E2B50804C79B435E707D /* LZPageMenu-umbrella.h in Headers */,
+				250914102008AC29009DD483 /* LZPageMenuMenuView.h in Headers */,
+				250914162008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */,
+				250914282008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */,
+				250914072008AC29009DD483 /* LZPageMenuHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE9BE204D7369D6C794D4DBAE5C710C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250914202008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */,
+				2509140E2008AC29009DD483 /* LZPageMenu.h in Headers */,
+				2509141D2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */,
+				250914232008AC29009DD483 /* UIView+LZFrame.h in Headers */,
+				5C65D6B9BDA4A81769D10DE0F1076536 /* Pods-LZPageMenu_Example-umbrella.h in Headers */,
+				250914112008AC29009DD483 /* LZPageMenuMenuView.h in Headers */,
+				250914172008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */,
+				250914292008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */,
+				250914082008AC29009DD483 /* LZPageMenuHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8242FF42C3C24F5DD46849DAFCD39C7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250914212008AC29009DD483 /* LZPageMenuDynamicItem.h in Headers */,
+				2509140F2008AC29009DD483 /* LZPageMenu.h in Headers */,
+				2509141E2008AC29009DD483 /* LZPageMenuCustomProtocol.h in Headers */,
+				250914242008AC29009DD483 /* UIView+LZFrame.h in Headers */,
+				B29B2956C26B4C8809A20BAB1E8888A4 /* Pods-LZPageMenu_Tests-umbrella.h in Headers */,
+				250914122008AC29009DD483 /* LZPageMenuMenuView.h in Headers */,
+				250914182008AC29009DD483 /* LZPageMenuPropertyManager.h in Headers */,
+				2509142A2008AC29009DD483 /* LZPageMenuPropertyProtocol.h in Headers */,
+				250914092008AC29009DD483 /* LZPageMenuHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3D90837A9A3516BABBA3D9A8E6A31E97 /* Pods-LZPageMenu_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1494FB8366E92AC87A7E39F42E9E39B1 /* Build configuration list for PBXNativeTarget "Pods-LZPageMenu_Tests" */;
+			buildPhases = (
+				117BD2CF77FA6836416CD01D12EAA5B3 /* Sources */,
+				FCA285EFE1FFFA788DEEAF0ABDE592E6 /* Frameworks */,
+				8242FF42C3C24F5DD46849DAFCD39C7A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LZPageMenu_Tests";
+			productName = "Pods-LZPageMenu_Tests";
+			productReference = 80CFFA5645FF62E68C055CA669FCD157 /* Pods_LZPageMenu_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		831F94CDF2203C23E456700911A599FA /* LZPageMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0391E30D77E962B14BEDC63EB008A1EC /* Build configuration list for PBXNativeTarget "LZPageMenu" */;
+			buildPhases = (
+				3F7496F53D3A4EC5E11C798345B7AE8D /* Sources */,
+				F68ACECB1CD5133B9FB2AEB4C4A9D80C /* Frameworks */,
+				145E6331B9DCC8B901CAD1DC2A04C85E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZPageMenu;
+			productName = LZPageMenu;
+			productReference = E7EA39746EFDCE75113250A613DF989E /* LZPageMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D82C1C4F6E3E135C89C7C395E5E21797 /* Pods-LZPageMenu_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E60D71BBD77B742BBB3791973D00E5AA /* Build configuration list for PBXNativeTarget "Pods-LZPageMenu_Example" */;
+			buildPhases = (
+				2D640D40EDD1A8E7480AFDAB7E15D3E3 /* Sources */,
+				CD78A57AD045A86D5C1C8A1CD8ABCC8B /* Frameworks */,
+				6AE9BE204D7369D6C794D4DBAE5C710C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C75F9DD112E1B03CD258F7F54C4A54F /* PBXTargetDependency */,
+			);
+			name = "Pods-LZPageMenu_Example";
+			productName = "Pods-LZPageMenu_Example";
+			productReference = 0D33CD4C951FF1627C8A29930092628B /* Pods_LZPageMenu_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4C53B70511AC24AAA0577966DAB15AC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				831F94CDF2203C23E456700911A599FA /* LZPageMenu */,
+				D82C1C4F6E3E135C89C7C395E5E21797 /* Pods-LZPageMenu_Example */,
+				3D90837A9A3516BABBA3D9A8E6A31E97 /* Pods-LZPageMenu_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117BD2CF77FA6836416CD01D12EAA5B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41438610197C5D2602B380AA0050A8E6 /* Pods-LZPageMenu_Tests-dummy.m in Sources */,
+				250914272008AC29009DD483 /* LZPageMenu.m in Sources */,
+				2509140C2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */,
+				2509141B2008AC29009DD483 /* UIView+LZFrame.m in Sources */,
+				250914152008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */,
+				250914062008AC29009DD483 /* LZPageMenuMenuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D640D40EDD1A8E7480AFDAB7E15D3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E535610FB4982CBFA2EBEE4EE91E0D7 /* Pods-LZPageMenu_Example-dummy.m in Sources */,
+				250914262008AC29009DD483 /* LZPageMenu.m in Sources */,
+				2509140B2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */,
+				2509141A2008AC29009DD483 /* UIView+LZFrame.m in Sources */,
+				250914142008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */,
+				250914052008AC29009DD483 /* LZPageMenuMenuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F7496F53D3A4EC5E11C798345B7AE8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D848A85D769D72490EBDD46641A7451 /* LZPageMenu-dummy.m in Sources */,
+				250914252008AC29009DD483 /* LZPageMenu.m in Sources */,
+				2509140A2008AC29009DD483 /* LZPageMenuPropertyManager.m in Sources */,
+				250914192008AC29009DD483 /* UIView+LZFrame.m in Sources */,
+				250914132008AC29009DD483 /* LZPageMenuDynamicItem.m in Sources */,
+				250914042008AC29009DD483 /* LZPageMenuMenuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C75F9DD112E1B03CD258F7F54C4A54F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LZPageMenu;
+			target = 831F94CDF2203C23E456700911A599FA /* LZPageMenu */;
+			targetProxy = 0DE8C8203BA9FFAB2CACC52745D9C7E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2382072C843172150D78C452A1B8ECF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2EB330F78F3B32DC83CCFEAA1470EB5 /* Pods-LZPageMenu_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LZPageMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LZPageMenu_Tests/Pods-LZPageMenu_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LZPageMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2867FAFB9A73B9DF94B472DC7910C8F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3E9AAC8344E53DD812169A1DF8F59CD /* LZPageMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LZPageMenu/LZPageMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LZPageMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LZPageMenu/LZPageMenu.modulemap";
+				PRODUCT_NAME = LZPageMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		99E091415A21ECEE16692B175D0A4E57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8108D13C7C66FED949A38DBA9F418674 /* Pods-LZPageMenu_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LZPageMenu_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LZPageMenu_Example/Pods-LZPageMenu_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LZPageMenu_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8DAB07FC86FD1B6AA11D5913E6DD97C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3E9AAC8344E53DD812169A1DF8F59CD /* LZPageMenu.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LZPageMenu/LZPageMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LZPageMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LZPageMenu/LZPageMenu.modulemap";
+				PRODUCT_NAME = LZPageMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9C65759FFC3186C42780C62024A8BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A0F3DB2074236AE4983638D315DA1B /* Pods-LZPageMenu_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LZPageMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LZPageMenu_Tests/Pods-LZPageMenu_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LZPageMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0AEDDC6EEF7164A3A37DBFEA3DC2B15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ABE87830475A5172DBD5938A14132DE /* Pods-LZPageMenu_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LZPageMenu_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LZPageMenu_Example/Pods-LZPageMenu_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LZPageMenu_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0391E30D77E962B14BEDC63EB008A1EC /* Build configuration list for PBXNativeTarget "LZPageMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8DAB07FC86FD1B6AA11D5913E6DD97C /* Debug */,
+				2867FAFB9A73B9DF94B472DC7910C8F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1494FB8366E92AC87A7E39F42E9E39B1 /* Build configuration list for PBXNativeTarget "Pods-LZPageMenu_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2382072C843172150D78C452A1B8ECF9 /* Debug */,
+				C9C65759FFC3186C42780C62024A8BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
+				731DC216E1A58545B559F6E0A2418060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E60D71BBD77B742BBB3791973D00E5AA /* Build configuration list for PBXNativeTarget "Pods-LZPageMenu_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0AEDDC6EEF7164A3A37DBFEA3DC2B15 /* Debug */,
+				99E091415A21ECEE16692B175D0A4E57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

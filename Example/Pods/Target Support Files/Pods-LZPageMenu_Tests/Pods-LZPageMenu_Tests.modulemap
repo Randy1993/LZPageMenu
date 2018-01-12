@@ -1,0 +1,6 @@
+framework module Pods_LZPageMenu_Tests {
+  umbrella header "Pods-LZPageMenu_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
