@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LZPageMenu_Example' do
+  pod 'LZPageMenu', :path => '../'
+
+  target 'LZPageMenu_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
