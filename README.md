@@ -13,50 +13,50 @@ LZPageMenu是一个强大的控制器分段，不仅支持多种样式的分段�
 #### 丰富的指示
 支持丰富的菜单指示样式：线条、圆点、图片、方块、椭圆等。并能够自定义指示的位置、宽度、高度等。
 
-圆点：
+#### 圆点：
 ![圆点.PNG](http://upload-images.jianshu.io/upload_images/2077842-794cd2a05a507e0c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-图片：
+#### 图片：
 ![图片.PNG](http://upload-images.jianshu.io/upload_images/2077842-5a0b59d0e2641caf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-方块：
+#### 方块：
 ![方块.PNG](http://upload-images.jianshu.io/upload_images/2077842-bec5ef723289f00b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-实心椭圆：
+#### 实心椭圆：
 ![实心椭圆.PNG](http://upload-images.jianshu.io/upload_images/2077842-6cdb5a62797d5e70.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-空心椭圆：
+#### 空心椭圆：
 ![空心椭圆.PNG](http://upload-images.jianshu.io/upload_images/2077842-77a147ed91626514.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-自定义指示位置：
+#### 自定义指示位置：
 ![定义指示位置.PNG](http://upload-images.jianshu.io/upload_images/2077842-45b530e0fd348595.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 丰富的菜单样式
 不仅仅支持普通的文本，还支持属性字符串、导航栏样式，能够随时随刻进行标题的刷新，更重要的是他支持菜单的自定义。不仅允许菜单选项宽度的自定义，更允许菜单宽度等分屏幕等。
 
-导航栏菜单：
+#### 导航栏菜单：
 ![导航栏菜单.PNG](http://upload-images.jianshu.io/upload_images/2077842-05aade4795bff179.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-属性字符串菜单：
+#### 属性字符串菜单：
 ![属性字符串.PNG](http://upload-images.jianshu.io/upload_images/2077842-b005027044431cc9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-宽度等分的菜单：
+#### 宽度等分的菜单：
 
 ![宽度等分.PNG](http://upload-images.jianshu.io/upload_images/2077842-5094566d0fad4943.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-自定义宽度的菜单：
+#### 自定义宽度的菜单：
 ![自定义宽度.PNG](http://upload-images.jianshu.io/upload_images/2077842-6aaa6d06005e9fa2.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-更新标题：
+#### 更新标题：
 ![刷新标题.gif](http://upload-images.jianshu.io/upload_images/2077842-7ec4fe9bf6bf6914.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-自定义菜单样式：
+#### 自定义菜单样式：
 ![自定义菜单.gif](http://upload-images.jianshu.io/upload_images/2077842-72a923543a81501d.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## 支持头视图
 目前支持头视图的下拉缩放和下拉偏移两种模式，并支持自控制器多表格模式。
 
-下拉缩放：
+#### 下拉缩放：
 ![带头视图的下拉缩放.gif](http://upload-images.jianshu.io/upload_images/2077842-01b163fd95f8a71f.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-下拉偏移：
+#### 下拉偏移：
 ![下拉偏移.gif](http://upload-images.jianshu.io/upload_images/2077842-d986bf6936cca891.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-双表格：
+#### 双表格：
 ![双表格.PNG](http://upload-images.jianshu.io/upload_images/2077842-e24f118d57f419a9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 使用
