@@ -4,8 +4,6 @@ LZPageMenu是一个强大的控制器分段，不仅支持多种样式的分段�
 
 在这里要致敬[PageMenu](https://github.com/PageMenu/PageMenu)，一些思想来自于它。但由于自身需求的丰富性，因此进行了重写。
 
-目前已更新Swift版本，具体代码后期会公布。
-
 ## 基本效果如下
 ![基本效果.gif](http://upload-images.jianshu.io/upload_images/2077842-aefa600eef091ba4.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
