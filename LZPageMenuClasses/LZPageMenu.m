@@ -644,6 +644,9 @@ static CGFloat LZBehaviorLimitValue = 1.5;
                 
                 if (weakSelf.animatorItem.center.y <= weakSelf.bounceBehavior.anchorPoint.y) {
                     strongSelf.animatorItem.center = weakSelf.bounceBehavior.anchorPoint;
+                    if ([weakSelf.delegate respondsToSelector:@selector(subScrollViewDidEndScroll:)] && strongSelf->_panScrollView) {
+                        [weakSelf.delegate subScrollViewDidEndScroll:strongSelf->_panScrollView];
+                    }
                     [weakSelf removeBounce];
                 }
                 [weakSelf setScrollViewContentOffet:strongSelf->_panScrollView offset:strongSelf.animatorItem.center];
@@ -696,7 +699,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     if ([_animator.behaviors containsObject:_inertiaBehavior]) {
         [_animator removeBehavior:_inertiaBehavior];
         
-        if ([_delegate respondsToSelector:@selector(subScrollViewDidEndScroll:)] && _panScrollView) {
+        if ([_delegate respondsToSelector:@selector(subScrollViewDidEndScroll:)] && _panScrollView && _panScrollView.contentOffset.y < _panScrollView.contentSize.height - _panScrollView.lz_height) {
             [_delegate subScrollViewDidEndScroll:_panScrollView];
         }
     }
