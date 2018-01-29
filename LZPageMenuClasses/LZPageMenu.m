@@ -7,11 +7,491 @@
 //
 
 #import "LZPageMenu.h"
-#import "LZPageMenuMenuView.h"
-#import "LZPageMenuHeader.h"
-#import "LZPageMenuDynamicItem.h"
+#import <objc/message.h>
 
+/// weakSelf
+#define LZWeakSelf(weakSelf) __weak __typeof(self) weakSelf = self;
+/// strongSelf
+#define LZStrongSelf(strongSelf) __strong __typeof(&*weakSelf) strongSelf = weakSelf;
+
+static NSString *LZPageMenuMenuViewCellIdentifire = @"CommunitySegmentScrollViewCellIdentifire";
 static CGFloat LZBehaviorLimitValue = 1.5;
+
+#pragma mark - LZPageMenuPropertyManager
+typedef NS_ENUM(NSUInteger, LZPageMenuItemType) {
+    LZPageMenuItemTypeViewControllerTitle,
+    LZPageMenuItemTypeCustomView,
+    LZPageMenuItemTypeAverageWidth,
+    LZPageMenuItemTypeCustomWidth,
+    LZPageMenuItemTypeAttribute
+};
+
+@interface LZPageMenuPropertyManager : NSObject<LZPageMenuPropertyProtocol>
+
+/// item未选中的宽度，用户不允许使用的属性
+@property (nonatomic, strong, readonly) NSMutableArray *itemUnselectedWidths;
+/// item选中的宽度，用户不允许使用的属性
+@property (nonatomic, strong, readonly) NSMutableArray *itemSelectedWidths;
+/// item未选中文本的宽度，用户不允许使用的属性
+@property (nonatomic, strong, readonly) NSMutableArray *itemUnselectedTextWidths;
+/// item选中文本的宽度，用户不允许使用的属性
+@property (nonatomic, strong, readonly) NSMutableArray *itemSelectedTextWidths;
+/// itemType
+@property (nonatomic, assign, readonly) LZPageMenuItemType menuItemType;
+/// 最后选中的Index，用户不允许使用的属性
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
+/// 开始滚动时的Index
+@property (nonatomic, assign) NSInteger startScrollIndex;
+/// 是否显示指示块在最底层
+@property (nonatomic, assign) BOOL showIndicatorInLowestLayer;
+/// 是否点击了菜单
+@property (nonatomic, assign) BOOL hadTapMenu;
+/// 为了解决指示块被cell遮挡
+@property (nonatomic, strong) void(^setIndicatorHierarchy)(void);
+
+/**
+ 计算所有item的宽度
+ */
+- (void)caclulateItemWidth;
+
+/**
+ 获取选中item的宽度
+ */
+- (CGFloat)selectedWidth:(NSInteger)index;
+
+/**
+ 获取未选中item的宽度
+ */
+- (CGFloat)unSelectedWidth:(NSInteger)index;
+
+/**
+ 当item宽度均分、自定义宽度时需要进行frame的特殊计算
+ */
+- (CGRect)getSpecialFrame:(CGRect)cellFrame index:(NSInteger)index;
+@end
+
+@implementation LZPageMenuPropertyManager
+
+/// 这些属性皆为外接属性，供用户使用
+@synthesize customDelegate, pageMenuBackgroundColor, viewControllers, menuItemUnSelectedTitles, menuItemSelectedTitles,
+needShowSelectionIndicator, selectionIndicatorHeight, selectionIndicatorOffset, selectionIndicatorColor, selectionIndicatorType, selectionIndicatorImage,selectionIndicatorImageWidth, selectionIndicatorWithEqualToTextWidth,
+menuBottomLineHeight, menuBottomLineColor, menuBackgroundColor, menuHeight, menuFrame, menuInset, menuContentInset, enableHorizontalBounce, defaultSelectedIndex, enableScroll, averageMenuWitdh,
+selectedMenuItemLabelColor, unselectedMenuItemLabelColor, selectedMenuItemLabelFont, unselectedMenuItemLabelFont, menuItemSpace, menuItemSelectedWidths, menuItemUnSelectedWidths, menuItemWidthBasedOnTitleTextWidth, scrollAnimationDurationOnMenuItemTap,
+verticalSeparatorWidth, verticalSeparatorHeight, verticalSeparatorColor, hideLastVerticalSeparator,
+showMenuInNavigationBar, menuWidth,
+headerView, headerViewHeight, headerViewTopSafeDistance, headerViewBottomSafeDistance, stretchHeaderView, headerViewMaxmumOffsetRate;
+
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        _itemSelectedWidths = [NSMutableArray array];
+        _itemUnselectedWidths = [NSMutableArray array];
+        _lastSelectedIndex = -1;
+        _showIndicatorInLowestLayer = YES;
+    }
+    return self;
+}
+
+#pragma mark - 公有方法
+- (void)caclulateItemWidth {
+    [_itemSelectedWidths removeAllObjects];
+    [_itemUnselectedWidths removeAllObjects];
+    
+    CGFloat width = 0;
+    
+    // 存在自定义视图
+    if (self.customDelegate) {
+        _menuItemType = LZPageMenuItemTypeCustomView;
+        
+        for (int i = 0; i < self.viewControllers.count; i++) {
+            if ([self.customDelegate respondsToSelector:@selector(menuItemSelectedWidth:)]) {
+                width = [self.customDelegate menuItemSelectedWidth:i];
+                
+                [_itemSelectedWidths addObject:@(width)];
+            }
+            
+            if ([self.customDelegate respondsToSelector:@selector(menuItemUnselectedWidth:)]) {
+                width = [self.customDelegate menuItemUnselectedWidth:i];
+                
+                [_itemUnselectedWidths addObject:@(width)];
+            }
+        }
+        
+        return;
+    }
+    
+    // 设置了自定义宽度
+    if (!self.menuItemWidthBasedOnTitleTextWidth && (self.menuItemSelectedWidths.count > 0 || self.menuItemUnSelectedWidths.count)) {
+        _menuItemType = LZPageMenuItemTypeCustomWidth;
+        if (self.menuItemSelectedWidths.count > 0) [_itemSelectedWidths addObjectsFromArray:self.menuItemSelectedWidths];
+        if (self.menuItemUnSelectedWidths.count > 0) [_itemUnselectedWidths addObjectsFromArray:self.menuItemUnSelectedWidths];
+        
+        [self setupTextWidthsArray];
+        for (UIViewController *vc in self.viewControllers) {
+            [self caclulateItemTextWidth:vc.title];
+        }
+        return;
+    }
+    
+    // 设置了富文本
+    if (self.menuItemUnSelectedTitles.count > 0) {
+        _menuItemType = LZPageMenuItemTypeAttribute;
+        
+        [self addWidthInArray:_itemUnselectedWidths byArray:self.menuItemUnSelectedTitles];
+        [self addWidthInArray:_itemUnselectedWidths byArray:self.menuItemSelectedTitles];
+        
+        return;
+    }
+    
+    // 等宽
+    if (self.averageMenuWitdh && !self.menuItemWidthBasedOnTitleTextWidth) {
+        _menuItemType = LZPageMenuItemTypeAverageWidth;
+        
+        [self setupTextWidthsArray];
+        
+        for (UIViewController *vc in self.viewControllers) {
+            CGFloat totalwidth = self.menuWidth;
+            if (totalwidth <= 0) totalwidth = [UIScreen mainScreen].bounds.size.width;
+            // 剔除间距
+            totalwidth -= (self.viewControllers.count - 1)*self.menuItemSpace;
+            totalwidth -= (self.menuInset.left + self.menuInset.right);
+            totalwidth -= (self.menuContentInset.left + self.menuContentInset.right);
+            
+            width = totalwidth/self.viewControllers.count;
+            
+            [_itemUnselectedWidths addObject:@(width)];
+            [_itemSelectedWidths addObject:@(width)];
+            
+            [self caclulateItemTextWidth:vc.title];
+        }
+        
+        return;
+    }
+    
+    // 使用控制器的标题
+    for (UIViewController *vc in self.viewControllers) {
+        _menuItemType = LZPageMenuItemTypeViewControllerTitle;
+        
+        width = [vc.title sizeWithAttributes:@{NSFontAttributeName:self.unselectedMenuItemLabelFont}].width;
+        [_itemUnselectedWidths addObject:@(width)];
+        width = [vc.title sizeWithAttributes:@{NSFontAttributeName:self.selectedMenuItemLabelFont}].width;
+        [_itemSelectedWidths addObject:@(width)];
+    }
+}
+
+- (CGFloat)selectedWidth:(NSInteger)index {
+    if (index >= _itemSelectedWidths.count) return [self unSelectedWidth:index];
+    return [_itemSelectedWidths[index] floatValue];
+}
+
+- (CGFloat)unSelectedWidth:(NSInteger)index {
+    if (index >= _itemUnselectedWidths.count) return 0;
+    
+    return [_itemUnselectedWidths[index] floatValue];
+}
+
+- (CGRect)getSpecialFrame:(CGRect)cellFrame index:(NSInteger)index {
+    if ((self.menuItemType == LZPageMenuItemTypeAverageWidth || self.menuItemType == LZPageMenuItemTypeCustomWidth) && self.selectionIndicatorWithEqualToTextWidth) {
+        CGFloat width = [self unSelectedTextWidth:index];;
+        if (index == _lastSelectedIndex) width = [self selectedTextWidth:index];
+        CGFloat x = (cellFrame.size.width - width)/2.0;
+        
+        CGRect newFrame = CGRectMake(cellFrame.origin.x + x, cellFrame.origin.y, width, cellFrame.size.height);
+        
+        return newFrame;
+    }
+    
+    return cellFrame;
+}
+
+#pragma mark - 私有方法
+- (void)addWidthInArray:(NSMutableArray *)array byArray:(NSMutableArray<NSAttributedString *> *)attributes {
+    for (NSAttributedString *attribute in attributes) {
+        CGFloat width = [attribute boundingRectWithSize:CGSizeMake(300.0, self.menuHeight - self.menuInset.top) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size.width;
+        [array addObject:@(width)];
+    }
+}
+
+- (CGFloat)selectedTextWidth:(NSInteger)index {
+    if (index >= _itemSelectedTextWidths.count) return [self unSelectedTextWidth:index];
+    return [_itemSelectedTextWidths[index] floatValue];
+}
+
+- (CGFloat)unSelectedTextWidth:(NSInteger)index {
+    if (index >= _itemUnselectedTextWidths.count) return 0;
+    
+    return [_itemUnselectedTextWidths[index] floatValue];
+}
+
+- (void)setupTextWidthsArray {
+    if (!_itemSelectedTextWidths) _itemSelectedTextWidths = [NSMutableArray array];
+    if (!_itemUnselectedTextWidths) _itemUnselectedTextWidths = [NSMutableArray array];
+    [_itemSelectedTextWidths removeAllObjects];
+    [_itemUnselectedTextWidths removeAllObjects];
+}
+
+- (void)caclulateItemTextWidth:(NSString *)title {
+    if (self.menuItemUnSelectedTitles.count > 0) {
+        [self addWidthInArray:_itemUnselectedTextWidths byArray:self.menuItemUnSelectedTitles];
+        [self addWidthInArray:_itemSelectedTextWidths byArray:self.menuItemSelectedTitles];
+    } else {
+        CGFloat width = [title sizeWithAttributes:@{NSFontAttributeName:self.unselectedMenuItemLabelFont}].width;
+        [_itemUnselectedTextWidths addObject:@(width)];
+        width = [title sizeWithAttributes:@{NSFontAttributeName:self.selectedMenuItemLabelFont}].width;
+        [_itemSelectedTextWidths addObject:@(width)];
+    }
+}
+
+@end
+
+#pragma mark - LZPageMenuMenuViewCell
+@interface LZPageMenuMenuViewCell : UICollectionViewCell
+
+/// 标题
+@property (nonatomic, weak) UILabel *titleLabel;
+/// 自定义视图
+@property (nonatomic, weak) UIView *customView;
+/// 垂直分割线
+@property (nonatomic, weak, readonly) CALayer *verticalSeparator;
+/// 属性管理器
+@property (nonatomic, strong) LZPageMenuPropertyManager *propertyManager;
+
+@end
+
+@implementation LZPageMenuMenuViewCell
+
+#pragma mark - 初始化
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.contentView.backgroundColor = [UIColor clearColor];
+    }
+    return self;
+}
+
+- (void)setupSubviews {
+    if (_customView || _titleLabel) return;
+    
+    UIView *subView = nil;
+    
+    if (_propertyManager.menuItemType == LZPageMenuItemTypeCustomView) {
+        subView = [_propertyManager.customDelegate menuItemView:0];
+        _customView = subView;
+    } else {
+        // 初始化子视图
+        UILabel *label = [[UILabel alloc] init];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        subView = label;
+        _titleLabel = label;
+    }
+    
+    [self.contentView addSubview:subView];
+    
+    if (_propertyManager.verticalSeparatorWidth <= 0) return;
+    CALayer *verticalSeparator = [[CALayer alloc] init];
+    verticalSeparator.backgroundColor = _propertyManager.verticalSeparatorColor.CGColor;
+    [self.contentView.layer addSublayer:verticalSeparator];
+    _verticalSeparator = verticalSeparator;
+}
+
+- (void)setPropertyManager:(LZPageMenuPropertyManager *)propertyManager {
+    _propertyManager = propertyManager;
+    
+    [self setupSubviews];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (_titleLabel) _titleLabel.frame = self.contentView.bounds;
+    if (_customView) _customView.frame = self.contentView.bounds;
+    if (_verticalSeparator) _verticalSeparator.frame = CGRectMake(self.contentView.frame.size.width - _propertyManager.verticalSeparatorWidth, (self.contentView.frame.size.height - _propertyManager.verticalSeparatorHeight)/2.0, _propertyManager.verticalSeparatorWidth, _propertyManager.verticalSeparatorHeight);
+}
+
+@end
+
+#pragma mark - LZPageMenuMenuView
+
+/**
+ 社区分段选择视图
+ */
+@interface LZPageMenuMenuView : UICollectionView<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+/// 点击item
+@property (nonatomic, strong) void(^selectedItemBlock)(CGRect frame, NSInteger index);
+/// 属性管理器
+@property (nonatomic, strong) LZPageMenuPropertyManager *propertyManager;
+
+- (void)refreshCell:(NSInteger)selectedIndex;
+
+@end
+
+@implementation LZPageMenuMenuView
+
+- (instancetype)init {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    self = [super initWithFrame:CGRectZero collectionViewLayout:layout];
+    if (self) {
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
+        self.dataSource = self;
+        self.delegate = self;
+        self.scrollsToTop = NO;
+        self.backgroundColor = [UIColor clearColor];
+        [self registerClass:[LZPageMenuMenuViewCell class] forCellWithReuseIdentifier:LZPageMenuMenuViewCellIdentifire];
+    }
+    
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    // 处理默认选中，之所以将方法放在这里是因为只能获取集合视图显示后的cell的frame
+    if (_propertyManager.defaultSelectedIndex >= 0) {
+        _propertyManager.hadTapMenu = YES;
+        [self refreshCell:_propertyManager.defaultSelectedIndex];
+        [self handleTap:[NSIndexPath indexPathForItem:_propertyManager.defaultSelectedIndex inSection:0]];
+        _propertyManager.defaultSelectedIndex = -1;
+    }
+    
+    if (_propertyManager.needShowSelectionIndicator && _propertyManager.showIndicatorInLowestLayer) {
+        _propertyManager.setIndicatorHierarchy();
+    }
+}
+
+- (void)setPropertyManager:(LZPageMenuPropertyManager *)propertyManager {
+    _propertyManager = propertyManager;
+    
+    self.contentInset = _propertyManager.menuContentInset;
+    self.bounces = _propertyManager.enableHorizontalBounce;
+    self.scrollEnabled = _propertyManager.enableScroll;
+}
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _propertyManager.viewControllers.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    LZPageMenuMenuViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LZPageMenuMenuViewCellIdentifire forIndexPath:indexPath];
+    cell.propertyManager = _propertyManager;
+    
+    // 垂直分割线处理
+    if (cell.verticalSeparator) cell.verticalSeparator.hidden = (indexPath.item == _propertyManager.viewControllers.count - 1 && _propertyManager.hideLastVerticalSeparator);
+    
+    // 自定义Item处理
+    if (_propertyManager.menuItemType == LZPageMenuItemTypeCustomView) {
+        if ([cell.customView respondsToSelector:NSSelectorFromString(@"configData:index:selected:")]) {
+            id itemData = nil;
+            if ([_propertyManager.customDelegate respondsToSelector:@selector(customViewData:)]) {
+                itemData = [_propertyManager.customDelegate customViewData:indexPath.item];
+            }
+            ((void (*)(id, SEL, id, NSInteger, BOOL))objc_msgSend)(cell.customView, NSSelectorFromString(@"configData:index:selected:"), itemData, indexPath.item, _propertyManager.lastSelectedIndex == indexPath.item);
+        }
+        
+        return cell;
+    }
+    
+    // 富文本Item的处理
+    if (_propertyManager.menuItemType == LZPageMenuItemTypeAttribute) {
+        if (_propertyManager.lastSelectedIndex == indexPath.item && _propertyManager.menuItemSelectedTitles.count > 0) {
+            cell.titleLabel.attributedText = _propertyManager.menuItemSelectedTitles[indexPath.row];
+        } else {
+            cell.titleLabel.attributedText = _propertyManager.menuItemUnSelectedTitles[indexPath.row];
+        }
+    } else { // 普通文本Item处理
+        cell.titleLabel.text = [_propertyManager.viewControllers[indexPath.row] title];
+        cell.titleLabel.textColor = (indexPath.item == _propertyManager.lastSelectedIndex ? _propertyManager.selectedMenuItemLabelColor : _propertyManager.unselectedMenuItemLabelColor);
+        cell.titleLabel.font = (indexPath.item == _propertyManager.lastSelectedIndex ? _propertyManager.selectedMenuItemLabelFont : _propertyManager.unselectedMenuItemLabelFont);
+    }
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat height = _propertyManager.menuHeight - _propertyManager.menuInset.top;
+    CGFloat width = _propertyManager.lastSelectedIndex == indexPath.item ? [_propertyManager selectedWidth:indexPath.item] : [_propertyManager unSelectedWidth:indexPath.item];
+    
+    return CGSizeMake(width, height);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (_propertyManager.lastSelectedIndex == indexPath.item || _propertyManager.hadTapMenu) return;
+    
+    _propertyManager.hadTapMenu = YES;
+    
+    // 设置选中
+    [self refreshCell:indexPath.item];
+    
+    // 处理点击
+    [self handleTap:indexPath];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return _propertyManager.menuItemSpace;
+}
+
+#pragma mark - 外部方法
+- (void)refreshCell:(NSInteger)selectedIndex {
+    if (selectedIndex >= _propertyManager.viewControllers.count || selectedIndex < 0 || selectedIndex == _propertyManager.lastSelectedIndex) return;
+    
+    // 更新cell
+    NSMutableArray *indexPaths = [NSMutableArray array];
+    [indexPaths addObject:[NSIndexPath indexPathForItem:selectedIndex inSection:0]];
+    if (_propertyManager.lastSelectedIndex >= 0) [indexPaths addObject:[NSIndexPath indexPathForItem:_propertyManager.lastSelectedIndex inSection:0]];
+    _propertyManager.lastSelectedIndex = selectedIndex;
+    [self reloadItemsAtIndexPaths:indexPaths.copy];
+    
+    // 滑动
+    [self scrollToItemAtIndexPath:indexPaths.firstObject atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
+
+#pragma mark - 点击的回调
+- (void)handleTap:(NSIndexPath *)indexPath {
+    UICollectionViewLayoutAttributes *attribute = [self.collectionViewLayout layoutAttributesForItemAtIndexPath:indexPath];
+    
+    CGRect frame = attribute.frame;
+    // 处理某些特殊情况
+    if (CGRectEqualToRect(CGRectZero, frame)) {
+        [self performSelector:@selector(handleTap:) withObject:indexPath afterDelay:0.1];
+        return;
+    }
+    
+    frame = [_propertyManager getSpecialFrame:frame index:indexPath.item];
+    !self.selectedItemBlock ? : self.selectedItemBlock(frame, indexPath.item);
+}
+
+@end
+
+#pragma mark - LZPageMenuDynamicItem
+
+@interface LZPageMenuDynamicItem : NSObject<UIDynamicItem>
+
+@end
+
+@implementation LZPageMenuDynamicItem
+
+@synthesize center, bounds, transform;
+
+- (instancetype)init {
+    if (self = [super init]) {
+        bounds = CGRectMake(0, 0, 1, 1);
+    }
+    return self;
+}
+
+@end
+
+#pragma mark - LZPageMenu
 
 @interface LZPageMenu () <UIScrollViewDelegate> {
     CGFloat _headerViewMaximumOffset;
@@ -69,8 +549,6 @@ static CGFloat LZBehaviorLimitValue = 1.5;
 @implementation LZPageMenu
 
 - (void)dealloc {
-    NSLog(@"%s", __func__);
-    
     if (_animator) {
         [_animator removeBehavior:_inertiaBehavior];
         [_animator removeBehavior:_bounceBehavior];
@@ -294,7 +772,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
         width += self.menuContentInset.left + self.menuContentInset.right;
     }
     
-    if (width >= naviBar.lz_width) width = naviBar.lz_width;
+    if (width >= naviBar.frame.size.width) width = naviBar.frame.size.width;
     _menuView.frame = CGRectMake(0.0, 0.0, width, self.menuHeight);
     self.menuWidth = width;
     [naviBar addSubview:_menuView];
@@ -326,11 +804,11 @@ static CGFloat LZBehaviorLimitValue = 1.5;
             [self addHadAddedPageAtIndex:startIndex];
         }
     }
-    
+ 
     [self addPageAtIndex:index];
     if (self.headerView) [self resetPanGestureData];
     [UIView animateWithDuration:self.scrollAnimationDurationOnMenuItemTap animations:^{
-        _contollerScrollView.contentOffset = CGPointMake(index * self.view.lz_width, 0.0);
+        _contollerScrollView.contentOffset = CGPointMake(index * self.view.frame.size.width, 0.0);
     } completion:^(BOOL finished) {
         [self removePage];
     }];
@@ -345,11 +823,11 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     BOOL goNext = NO;
     BOOL goPrevious = NO;
     CGFloat rate = 0.5;
-    if (_propertyManager.startScrollIndex * self.view.lz_width < scrollView.contentOffset.x) goNext = YES;
-    if (_propertyManager.startScrollIndex * self.view.lz_width > scrollView.contentOffset.x) goPrevious = YES;
+    if (_propertyManager.startScrollIndex * self.view.frame.size.width < scrollView.contentOffset.x) goNext = YES;
+    if (_propertyManager.startScrollIndex * self.view.frame.size.width > scrollView.contentOffset.x) goPrevious = YES;
     if (!goNext && !goPrevious) return;
     
-    NSInteger currentIndex = goNext ? ceil(scrollView.contentOffset.x / _contollerScrollView.lz_width) : floor(scrollView.contentOffset.x / _contollerScrollView.lz_width);
+    NSInteger currentIndex = goNext ? ceil(scrollView.contentOffset.x / _contollerScrollView.frame.size.width) : floor(scrollView.contentOffset.x / _contollerScrollView.frame.size.width);
     if (currentIndex >= self.viewControllers.count || currentIndex < 0) return;
     
     // 首先判断对应位置的页面有没有被添加过，有则在滑动之初就添加，避免出现白屏
@@ -357,8 +835,8 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     
     // 再者判读是否划过了半个屏幕的距离，控制指示条的滚动等
     BOOL needAddNewPage = NO;
-    if (goNext) needAddNewPage = fabs((currentIndex - 1) * _contollerScrollView.lz_width - scrollView.contentOffset.x)/_contollerScrollView.lz_width >= rate;
-    if (goPrevious) needAddNewPage = fabs((currentIndex + 1) * _contollerScrollView.lz_width - scrollView.contentOffset.x)/_contollerScrollView.lz_width >= rate;
+    if (goNext) needAddNewPage = fabs((currentIndex - 1) * _contollerScrollView.frame.size.width - scrollView.contentOffset.x)/_contollerScrollView.frame.size.width >= rate;
+    if (goPrevious) needAddNewPage = fabs((currentIndex + 1) * _contollerScrollView.frame.size.width - scrollView.contentOffset.x)/_contollerScrollView.frame.size.width >= rate;
     
     // 处理菜单
     if (!needAddNewPage) {
@@ -407,7 +885,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     
     [newVC willMoveToParentViewController:self];
     
-    newVC.view.frame = CGRectMake(_contollerScrollView.lz_width * index, 0.0, _contollerScrollView.lz_width, _contollerScrollView.lz_height);
+    newVC.view.frame = CGRectMake(_contollerScrollView.frame.size.width * index, 0.0, _contollerScrollView.frame.size.width, _contollerScrollView.frame.size.height);
     
     [self addChildViewController:newVC];
     [_contollerScrollView addSubview:newVC.view];
@@ -624,10 +1102,10 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     if (!scrollView) return;
     CGPoint oldOffset = scrollView.contentOffset;
     CGFloat newOffset_Y = oldOffset.y + offsetY;
-    CGFloat maxContentsizeY = scrollView.contentSize.height - scrollView.lz_height/2.0;
+    CGFloat maxContentsizeY = scrollView.contentSize.height - scrollView.frame.size.height/2.0;
     
-    // 添加动画的条件：1、惯性上滑到极限 2、惯性停止且超出了scrollView.contentSize.height - scrollView.lz_height
-    if (newOffset_Y >= scrollView.contentSize.height - scrollView.lz_height) {
+    // 添加动画的条件：1、惯性上滑到极限 2、惯性停止且超出了scrollView.contentSize.height - scrollView.frame.size.height
+    if (newOffset_Y >= scrollView.contentSize.height - scrollView.frame.size.height) {
         BOOL addBounceCondition1 = (newOffset_Y >= maxContentsizeY && ![_animator.behaviors containsObject:_bounceBehavior]);
         BOOL addBounceCondition2 = (offsetY < LZBehaviorLimitValue && offsetY >= 0 && ![_animator.behaviors containsObject:_bounceBehavior]);
         
@@ -639,7 +1117,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
         
         if ([behavior isEqual:_inertiaBehavior] && (addBounceCondition1 || addBounceCondition2)) {
             LZWeakSelf(weakSelf);
-            [self addBounce:_panScrollView.contentOffset anchorPoint:CGPointMake(0, _panScrollView.contentSize.height - _panScrollView.lz_height) action:^{
+            [self addBounce:_panScrollView.contentOffset anchorPoint:CGPointMake(0, _panScrollView.contentSize.height - _panScrollView.frame.size.height) action:^{
                 LZStrongSelf(strongSelf);
                 
                 if (weakSelf.animatorItem.center.y <= weakSelf.bounceBehavior.anchorPoint.y) {
@@ -699,7 +1177,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     if ([_animator.behaviors containsObject:_inertiaBehavior]) {
         [_animator removeBehavior:_inertiaBehavior];
         
-        if ([_delegate respondsToSelector:@selector(subScrollViewDidEndScroll:)] && _panScrollView && _panScrollView.contentOffset.y < _panScrollView.contentSize.height - _panScrollView.lz_height) {
+        if ([_delegate respondsToSelector:@selector(subScrollViewDidEndScroll:)] && _panScrollView && _panScrollView.contentOffset.y < _panScrollView.contentSize.height - _panScrollView.frame.size.height) {
             [_delegate subScrollViewDidEndScroll:_panScrollView];
         }
     }
@@ -821,12 +1299,12 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     
     // _contollerScrollView
     y = 0;
-    CGFloat controllerScrollViewHeight = self.view.lz_height - self.menuHeight - self.headerViewTopSafeDistance - self.headerViewBottomSafeDistance;
+    CGFloat controllerScrollViewHeight = self.view.frame.size.height - self.menuHeight - self.headerViewTopSafeDistance - self.headerViewBottomSafeDistance;
     if (self.showMenuInNavigationBar) controllerScrollViewHeight += self.menuHeight;
     [self setTopMargin:y left:left right:right height:controllerScrollViewHeight view:_contollerScrollView otherView:_menuView superView:self.view];
    
     // 设置contentSize
-    _contollerScrollView.contentSize = CGSizeMake(self.view.lz_width * self.propertyManager.viewControllers.count, controllerScrollViewHeight);
+    _contollerScrollView.contentSize = CGSizeMake(self.view.frame.size.width * self.propertyManager.viewControllers.count, controllerScrollViewHeight);
     
     // _menuScrollView
     if (!self.showMenuInNavigationBar) {
@@ -895,7 +1373,7 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     [self setupIndicator];
     
     if (self.menuBottomLineHeight > 0) {
-        self.bottomLine.frame = CGRectMake(0.0, self.menuHeight - self.menuBottomLineHeight, self.view.lz_width, self.menuBottomLineHeight);
+        self.bottomLine.frame = CGRectMake(0.0, self.menuHeight - self.menuBottomLineHeight, self.view.frame.size.width, self.menuBottomLineHeight);
         self.bottomLine.backgroundColor = self.menuBottomLineColor.CGColor;
     }
     
@@ -912,5 +1390,4 @@ static CGFloat LZBehaviorLimitValue = 1.5;
     [_menuScrollView reloadData];
     [self scrollIndicator:[self getCellFrame:_propertyManager.lastSelectedIndex]];
 }
-
 @end

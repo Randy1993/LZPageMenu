@@ -9,7 +9,7 @@
 #import "SpecialBlockViewController.h"
 #import "ShowViewController.h"
 #import "LZPageMenu.h"
-#import "LZPageMenuHeader.h"
+
 
 @interface SpecialBlockViewController ()
 
@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    LZPageMenu *pageMenu = [[LZPageMenu alloc] initWithFrame:CGRectMake(0.0, LZ_NavHeight, self.view.lz_width, self.view.lz_height - LZ_NavHeight)];
+    LZPageMenu *pageMenu = [[LZPageMenu alloc] initWithFrame:CGRectMake(0.0, LZ_NavHeight, self.view.frame.size.width, self.view.frame.size.height - LZ_NavHeight)];
     
     NSMutableArray *vcArrays = [NSMutableArray array];
     for (int i = 0 ; i < 10; i++) {

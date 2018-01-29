@@ -10,7 +10,7 @@
 #import "SubTableViewController.h"
 #import "ShowViewController.h"
 #import "LZPageMenu.h"
-#import "LZPageMenuHeader.h"
+
 #import "LZHeaderView.h"
 
 @interface OffsetHeaderViewController ()<LZPageMenuDelegate>
@@ -27,10 +27,10 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    LZPageMenu *pageMenu = [[LZPageMenu alloc] initWithFrame:CGRectMake(0.0, LZ_NavHeight, self.view.lz_width, self.view.lz_height - LZ_NavHeight)];
+    LZPageMenu *pageMenu = [[LZPageMenu alloc] initWithFrame:CGRectMake(0.0, LZ_NavHeight, self.view.frame.size.width, self.view.frame.size.height - LZ_NavHeight)];
     
     LZHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"LZHeaderView" owner:nil options:nil].firstObject;
-    headerView.frame = CGRectMake(0.0, 0.0, self.view.lz_width, 150);
+    headerView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, 150);
     
     NSMutableArray *vcArrays = [NSMutableArray array];
     for (int i = 0 ; i < 10; i++) {

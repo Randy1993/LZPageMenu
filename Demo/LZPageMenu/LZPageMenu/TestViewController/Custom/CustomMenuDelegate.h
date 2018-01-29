@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LZPageMenuCustomProtocol.h"
+#import "LZPageMenuProtocols.h"
 
 @interface CustomMenuDelegate : NSObject<LZPageMenuCustomProtocol>
 

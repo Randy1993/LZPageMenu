@@ -10,7 +10,7 @@
 #import "SubTableViewController1.h"
 #import "ShowViewController.h"
 #import "LZPageMenu.h"
-#import "LZPageMenuHeader.h"
+
 #import "LZHeaderView.h"
 
 @interface TwoTablesViewController ()<LZPageMenuDelegate>
@@ -32,9 +32,9 @@
     
     LZPageMenu *pageMenu = [[LZPageMenu alloc] initWithFrame:self.view.bounds];
     
-    LZWeakSelf(weakSelf);
+    __weak __typeof(self) weakSelf = self;
     LZHeaderView *headerView = [[NSBundle mainBundle] loadNibNamed:@"LZHeaderView" owner:nil options:nil].firstObject;
-    headerView.frame = CGRectMake(0.0, 0.0, self.view.lz_width, 150);
+    headerView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width, 150);
     headerView.goBackBlock = ^{
         [weakSelf.navigationController popViewControllerAnimated:YES];
     };

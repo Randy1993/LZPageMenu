@@ -7,7 +7,6 @@
 //
 
 #import "LZHeaderView.h"
-#import "LZPageMenuHeader.h"
 
 @implementation LZHeaderView
 

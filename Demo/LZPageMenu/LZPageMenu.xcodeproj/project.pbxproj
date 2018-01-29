@@ -32,9 +32,6 @@
 		2588A0DE200360AA0001290F /* FHHFPSIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0BD200360AA0001290F /* FHHFPSIndicator.m */; };
 		2588A0DF200360AA0001290F /* UIWindow+FHH.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0BF200360AA0001290F /* UIWindow+FHH.m */; };
 		2588A0E0200360AA0001290F /* LZPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0C2200360AA0001290F /* LZPageMenu.m */; };
-		2588A0E1200360AA0001290F /* LZPageMenuMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0C6200360AA0001290F /* LZPageMenuMenuView.m */; };
-		2588A0E2200360AA0001290F /* LZPageMenuPropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0C8200360AA0001290F /* LZPageMenuPropertyManager.m */; };
-		2588A0E3200360AA0001290F /* UIView+LZFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588A0CB200360AA0001290F /* UIView+LZFrame.m */; };
 		2588A0E4200360AA0001290F /* Flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 2588A0CD200360AA0001290F /* Flower.png */; };
 		2588A0E5200360AA0001290F /* ImageArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2588A0CE200360AA0001290F /* ImageArrow.png */; };
 		2588A0E7200360C70001290F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2588A0E6200360C60001290F /* Main.storyboard */; };
@@ -45,7 +42,6 @@
 		25A9488F2005C0170032D7E8 /* LZHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A9488E2005C0170032D7E8 /* LZHeaderView.xib */; };
 		25A948922005F1EC0032D7E8 /* TwoTablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A948912005F1EC0032D7E8 /* TwoTablesViewController.m */; };
 		25A948952005F2390032D7E8 /* SubTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A948942005F2390032D7E8 /* SubTableViewController1.m */; };
-		25A94898200617190032D7E8 /* LZPageMenuDynamicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A94897200617190032D7E8 /* LZPageMenuDynamicItem.m */; };
 		25A9489A2006EDC00032D7E8 /* HeaderImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25A948992006EDC00032D7E8 /* HeaderImage.jpeg */; };
 		25A9489D2006F09B0032D7E8 /* OffsetHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A9489C2006F09B0032D7E8 /* OffsetHeaderViewController.m */; };
 		25CF6B09200496DA003E653F /* AverageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CF6B08200496DA003E653F /* AverageViewController.m */; };
@@ -56,6 +52,8 @@
 		250913BC20089C08009DD483 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		250913BE2008A20A009DD483 /* UpdateTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateTitleViewController.h; sourceTree = "<group>"; };
 		250913BF2008A20A009DD483 /* UpdateTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateTitleViewController.m; sourceTree = "<group>"; };
+		251A7238201ED36E00B5D54C /* LZPageMenuProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuProtocols.h; sourceTree = "<group>"; };
+		251A7239201ED42000B5D54C /* Demo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.pch; sourceTree = "<group>"; };
 		2588A07C200360620001290F /* LZPageMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZPageMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2588A088200360620001290F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2588A08B200360620001290F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,15 +97,6 @@
 		2588A0BF200360AA0001290F /* UIWindow+FHH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FHH.m"; sourceTree = "<group>"; };
 		2588A0C1200360AA0001290F /* LZPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenu.h; sourceTree = "<group>"; };
 		2588A0C2200360AA0001290F /* LZPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenu.m; sourceTree = "<group>"; };
-		2588A0C3200360AA0001290F /* LZPageMenuCustomProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuCustomProtocol.h; sourceTree = "<group>"; };
-		2588A0C4200360AA0001290F /* LZPageMenuHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuHeader.h; sourceTree = "<group>"; };
-		2588A0C5200360AA0001290F /* LZPageMenuMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuMenuView.h; sourceTree = "<group>"; };
-		2588A0C6200360AA0001290F /* LZPageMenuMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuMenuView.m; sourceTree = "<group>"; };
-		2588A0C7200360AA0001290F /* LZPageMenuPropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuPropertyManager.h; sourceTree = "<group>"; };
-		2588A0C8200360AA0001290F /* LZPageMenuPropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuPropertyManager.m; sourceTree = "<group>"; };
-		2588A0C9200360AA0001290F /* LZPageMenuPropertyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPageMenuPropertyProtocol.h; sourceTree = "<group>"; };
-		2588A0CA200360AA0001290F /* UIView+LZFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LZFrame.h"; sourceTree = "<group>"; };
-		2588A0CB200360AA0001290F /* UIView+LZFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LZFrame.m"; sourceTree = "<group>"; };
 		2588A0CD200360AA0001290F /* Flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flower.png; sourceTree = "<group>"; };
 		2588A0CE200360AA0001290F /* ImageArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImageArrow.png; sourceTree = "<group>"; };
 		2588A0E6200360C60001290F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -123,8 +112,6 @@
 		25A948912005F1EC0032D7E8 /* TwoTablesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoTablesViewController.m; sourceTree = "<group>"; };
 		25A948932005F2390032D7E8 /* SubTableViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubTableViewController1.h; sourceTree = "<group>"; };
 		25A948942005F2390032D7E8 /* SubTableViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubTableViewController1.m; sourceTree = "<group>"; };
-		25A94896200617190032D7E8 /* LZPageMenuDynamicItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZPageMenuDynamicItem.h; sourceTree = "<group>"; };
-		25A94897200617190032D7E8 /* LZPageMenuDynamicItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZPageMenuDynamicItem.m; sourceTree = "<group>"; };
 		25A948992006EDC00032D7E8 /* HeaderImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HeaderImage.jpeg; sourceTree = "<group>"; };
 		25A9489B2006F09B0032D7E8 /* OffsetHeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffsetHeaderViewController.h; sourceTree = "<group>"; };
 		25A9489C2006F09B0032D7E8 /* OffsetHeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffsetHeaderViewController.m; sourceTree = "<group>"; };
@@ -177,6 +164,7 @@
 				2588A08A200360620001290F /* LaunchScreen.storyboard */,
 				2588A08D200360620001290F /* Info.plist */,
 				2588A08E200360620001290F /* main.m */,
+				251A7239201ED42000B5D54C /* Demo.pch */,
 			);
 			path = LZPageMenu;
 			sourceTree = "<group>";
@@ -263,17 +251,7 @@
 			children = (
 				2588A0C1200360AA0001290F /* LZPageMenu.h */,
 				2588A0C2200360AA0001290F /* LZPageMenu.m */,
-				2588A0C4200360AA0001290F /* LZPageMenuHeader.h */,
-				2588A0C5200360AA0001290F /* LZPageMenuMenuView.h */,
-				2588A0C6200360AA0001290F /* LZPageMenuMenuView.m */,
-				2588A0C7200360AA0001290F /* LZPageMenuPropertyManager.h */,
-				2588A0C8200360AA0001290F /* LZPageMenuPropertyManager.m */,
-				2588A0C9200360AA0001290F /* LZPageMenuPropertyProtocol.h */,
-				2588A0C3200360AA0001290F /* LZPageMenuCustomProtocol.h */,
-				25A94896200617190032D7E8 /* LZPageMenuDynamicItem.h */,
-				25A94897200617190032D7E8 /* LZPageMenuDynamicItem.m */,
-				2588A0CA200360AA0001290F /* UIView+LZFrame.h */,
-				2588A0CB200360AA0001290F /* UIView+LZFrame.m */,
+				251A7238201ED36E00B5D54C /* LZPageMenuProtocols.h */,
 			);
 			path = LZPageMenu;
 			sourceTree = "<group>";
@@ -397,7 +375,6 @@
 				2588A0992003609D0001290F /* TableViewController.m in Sources */,
 				2588A0D7200360AA0001290F /* SolidOvalViewController.m in Sources */,
 				2588A0CF200360AA0001290F /* CustomMenuDelegate.m in Sources */,
-				25A94898200617190032D7E8 /* LZPageMenuDynamicItem.m in Sources */,
 				2588A09A2003609D0001290F /* AppDelegate.m in Sources */,
 				2588A0D4200360AA0001290F /* DotViewController.m in Sources */,
 				2588A0F32003716F0001290F /* HeaderViewController.m in Sources */,
@@ -410,13 +387,10 @@
 				2588A0E0200360AA0001290F /* LZPageMenu.m in Sources */,
 				2588A0D0200360AA0001290F /* CustomMenuItem.m in Sources */,
 				25CF6B09200496DA003E653F /* AverageViewController.m in Sources */,
-				2588A0E1200360AA0001290F /* LZPageMenuMenuView.m in Sources */,
 				25A9489D2006F09B0032D7E8 /* OffsetHeaderViewController.m in Sources */,
 				25A948952005F2390032D7E8 /* SubTableViewController1.m in Sources */,
-				2588A0E2200360AA0001290F /* LZPageMenuPropertyManager.m in Sources */,
 				2588A0D8200360AA0001290F /* SpecialBlockViewController.m in Sources */,
 				250913C02008A20A009DD483 /* UpdateTitleViewController.m in Sources */,
-				2588A0E3200360AA0001290F /* UIView+LZFrame.m in Sources */,
 				25CF6B0C200498AC003E653F /* CustomItemWidthViewController.m in Sources */,
 				2588A0D2200360AA0001290F /* BasicViewController.m in Sources */,
 				2588A0DB200360AA0001290F /* NaviMenuViewController.m in Sources */,
@@ -548,6 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QTR3NT98RR;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LZPageMenu/Demo.pch";
 				INFOPLIST_FILE = LZPageMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -563,6 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QTR3NT98RR;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LZPageMenu/Demo.pch";
 				INFOPLIST_FILE = LZPageMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
