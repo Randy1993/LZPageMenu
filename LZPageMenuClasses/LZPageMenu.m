@@ -709,9 +709,9 @@ headerView, headerViewHeight, headerViewTopSafeDistance, headerViewBottomSafeDis
     CGFloat height = self.selectionIndicatorHeight;
     CGFloat x = CGRectGetMinX(itemFrame) + self.selectionIndicatorOffset.left;
     CGFloat y = self.menuHeight - self.menuInset.top - fabs(self.menuInset.bottom) - height;
-    if (self.selectionIndicatorOffset.top > 0) {
+    if (self.selectionIndicatorOffset.top != 0) {
         y = self.selectionIndicatorOffset.top;
-    } else if (self.selectionIndicatorOffset.bottom > 0) {
+    } else if (self.selectionIndicatorOffset.bottom != 0) {
         y -= self.selectionIndicatorOffset.bottom;
     }
     
