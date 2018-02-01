@@ -240,6 +240,6 @@ LZPageMenu是一个强大的控制器分段，不仅支持多种样式的分段�
 
 ## Pod安装
 ```
-pod 'LZPageMenu'
+pod 'LZPageMenu', '~> 2.0.0'
 ```
 ## 欢迎大家提issue、fork。
