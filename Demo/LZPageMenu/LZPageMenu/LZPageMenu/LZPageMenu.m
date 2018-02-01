@@ -73,9 +73,9 @@ typedef NS_ENUM(NSUInteger, LZPageMenuItemType) {
 @implementation LZPageMenuPropertyManager
 
 /// 这些属性皆为外接属性，供用户使用
-@synthesize customDelegate, pageMenuBackgroundColor, viewControllers, menuItemUnSelectedTitles, menuItemSelectedTitles,
+@synthesize customDelegate, pageMenuBackgroundColor, viewControllers, menuItemUnSelectedTitles, menuItemSelectedTitles,enableControllerScrollViewBounce,
 needShowSelectionIndicator, selectionIndicatorHeight, selectionIndicatorOffset, selectionIndicatorColor, selectionIndicatorType, selectionIndicatorImage,selectionIndicatorImageWidth, selectionIndicatorWithEqualToTextWidth,
-menuBottomLineHeight, menuBottomLineColor, menuBackgroundColor, menuHeight, menuFrame, menuInset, menuContentInset, enableHorizontalBounce, defaultSelectedIndex, enableScroll, averageMenuWitdh,
+menuBottomLineHeight, menuBottomLineColor, menuBackgroundColor, menuHeight, menuFrame, menuInset, menuContentInset, enableMenuBounce, defaultSelectedIndex, enableMenuScroll, averageMenuWitdh,
 selectedMenuItemLabelColor, unselectedMenuItemLabelColor, selectedMenuItemLabelFont, unselectedMenuItemLabelFont, menuItemSpace, menuItemSelectedWidths, menuItemUnSelectedWidths, menuItemWidthBasedOnTitleTextWidth, scrollAnimationDurationOnMenuItemTap,
 verticalSeparatorWidth, verticalSeparatorHeight, verticalSeparatorColor, hideLastVerticalSeparator,
 showMenuInNavigationBar, menuWidth,
@@ -368,8 +368,8 @@ headerView, headerViewHeight, headerViewTopSafeDistance, headerViewBottomSafeDis
     _propertyManager = propertyManager;
     
     self.contentInset = _propertyManager.menuContentInset;
-    self.bounces = _propertyManager.enableHorizontalBounce;
-    self.scrollEnabled = _propertyManager.enableScroll;
+    self.bounces = _propertyManager.enableMenuBounce;
+    self.scrollEnabled = _propertyManager.enableMenuScroll;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -583,12 +583,13 @@ headerView, headerViewHeight, headerViewTopSafeDistance, headerViewBottomSafeDis
     self.verticalSeparatorColor = [UIColor lightGrayColor];
     
     self.needShowSelectionIndicator = YES;
-    self.enableHorizontalBounce = YES;
+    self.enableMenuScroll = YES;
     self.menuItemWidthBasedOnTitleTextWidth = YES;
     self.hideLastVerticalSeparator = YES;
-    self.enableScroll = YES;
+    self.enableMenuBounce = YES;
     self.selectionIndicatorWithEqualToTextWidth = YES;
     self.stretchHeaderView = YES;
+    self.enableControllerScrollViewBounce = YES;
     
     self.menuHeight = 44.0;
     self.selectionIndicatorHeight = 2.0;
@@ -1370,6 +1371,7 @@ headerView, headerViewHeight, headerViewTopSafeDistance, headerViewBottomSafeDis
     _menuView.backgroundColor = self.menuBackgroundColor;
     _menuScrollView.backgroundColor = self.menuBackgroundColor;
     _contollerScrollView.backgroundColor = self.pageMenuBackgroundColor;
+    _contollerScrollView.bounces = self.enableControllerScrollViewBounce;
     [self setupIndicator];
     
     if (self.menuBottomLineHeight > 0) {

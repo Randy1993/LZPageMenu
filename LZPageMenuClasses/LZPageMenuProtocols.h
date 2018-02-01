@@ -117,6 +117,8 @@ typedef NS_ENUM(NSUInteger, LZSelectionIndicatorType) {
 @property (nonatomic, strong) NSMutableArray<NSAttributedString *> *menuItemSelectedTitles;
 /// 设置默认选中
 @property (nonatomic, assign) NSInteger defaultSelectedIndex;
+/// 是否允许回弹，默认为YES
+@property (nonatomic, assign) BOOL enableControllerScrollViewBounce;
 
 #pragma mark - 菜单栏Item指示线
 /// 是否显示指示线，默认显示
@@ -154,9 +156,9 @@ typedef NS_ENUM(NSUInteger, LZSelectionIndicatorType) {
 /// 设置菜单内容的偏移，实际上设置UICollectionView的contentInset偏移，这种偏移不会导致遮挡效果，默认为（0.0, 15.0, 0.0, 15.0）
 @property (nonatomic, assign) UIEdgeInsets menuContentInset;
 /// 是否允许回弹，默认为YES
-@property (nonatomic, assign) BOOL enableHorizontalBounce;
+@property (nonatomic, assign) BOOL enableMenuBounce;
 /// 是否允许菜单滚动
-@property (nonatomic, assign) BOOL enableScroll;
+@property (nonatomic, assign) BOOL enableMenuScroll;
 /// 菜单的宽度
 @property (nonatomic, assign) CGFloat menuWidth;
 /// item宽度是否均分menu宽度，需要设置menuWidth，否则取屏幕宽度。此值对自定义菜单无效。
