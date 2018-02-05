@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   
   s.name         = "LZPageMenu"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "一个功能强大的控制器分段"
   s.homepage     = "https://github.com/Randy1993/LZPageMenu"
   s.license      = "MIT"
